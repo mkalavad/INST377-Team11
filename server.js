@@ -25,7 +25,7 @@ const authOptions = {
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('design'));
+app.use(express.static('public'));
 
 app.route('/index')
   .get((req, res) => {
