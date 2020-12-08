@@ -44,13 +44,13 @@
 
   <script>
   // find template and compile it
-  var templateSource = document.getElementById('results-template').innerHTML,
+  let templateSource = document.getElementById('results-template').innerHTML,
   template = Handlebars.compile(templateSource),
   resultsPlaceholder = document.getElementById('results'),
   playingCssClass = 'playing',
   audioObject = null;
 
-  var fetchTracks = function (albumId, callback) {
+  let fetchTracks = function (albumId, callback) {
     $.ajax({
       url: 'https://api.spotify.com/v1/albums/' + albumId,
       success: function (response) {
@@ -59,7 +59,7 @@
     });
   };
 
-  var searchAlbums = function (query) {
+  let searchAlbums = function (query) {
     $.ajax({
       url: 'https://api.spotify.com/v1/search',
       data: {
@@ -73,7 +73,7 @@
   };
 
   results.addEventListener('click', function (e) {
-    var target = e.target;
+    let target = e.target;
     if (target !== null && target.classList.contains('cover')) {
       if (target.classList.contains(playingCssClass)) {
         audioObject.pause();

@@ -34,9 +34,6 @@ app.route('/index')
   .post(async (req, res) => {
     console.log('POST request detected');
     console.log('Form data in req.body', req.body);
-    // const data = await fetch("https://api.spotify.com/v1/audio-analysis/6EJiVf7U0p1BBfs0qqeb1f"); //lab7
-    // const dataj = await data.json(); //lab7
-    // res.json(dataj); //lab7
   });
 
 //copy from https://github.com/spotify/web-api-auth-examples/blob/master/client_credentials/app.js
@@ -44,8 +41,8 @@ request.post(authOptions, function(error, response, body) {
   if (!error && response.statusCode === 200) {
 
     // use the access token to access the Spotify Web API
-    var token = body.access_token;
-    var options = {
+    let token = body.access_token;
+    let options = {
       url: 'https://api.spotify.com/v1/users/jmperezperez',
       headers: {
         'Authorization': 'Bearer ' + token
