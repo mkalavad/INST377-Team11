@@ -38,8 +38,8 @@
 }
 body {
 	color: #666666;
-	font-size: 14px;
-	font-family: 'poppins', sans-serif;
+	
+	font-family: 'Architects Daughter', cursive;
 	line-height: 1.80857;
 	font-weight: normal;
 	overflow-x: hidden;
@@ -1612,7 +1612,7 @@ input[type="checkbox"] .styled:checked+label::after, input[type="radio"] .styled
 	padding-bottom: 0px;
 }
 .experts .experts-box {
-	background-color: #060402;
+	background-color: #1d1616;
 }
 .experts .experts-box {
 	padding-top: 50px;
@@ -1625,7 +1625,7 @@ input[type="checkbox"] .styled:checked+label::after, input[type="radio"] .styled
 	margin: 0px;
 }
 .experts .experts-box .experts-threebox figure img {
-	width: 100%;
+	width: 10%;
 }
 .experts .experts-box .experts-threebox h3 {
 	font-size: 20px;
