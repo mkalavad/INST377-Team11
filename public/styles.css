@@ -97,11 +97,6 @@ nav a, nav span {
   padding: 15px;
 }
 
-.sublist1, .sublist2, .sublist3 {
-  font-family: 'Yellowtail', cursive;
-  font-weight: normal;
-}
-
 @media screen and (max-width: 1000px) {
   .container {
     justify-content: center;
