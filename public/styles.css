@@ -18,7 +18,10 @@ body {
   justify-content: space-between;
   flex-direction: row;
 }
-
+.title{
+  display: flex;
+  justify-content: center;
+}
 .wrapper {
   display: flex;
   justify-content: center;
