@@ -1,32 +1,106 @@
 <!-- App can be found at: https://boiling-anchorage-15365.herokuapp.com/ -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="author" content="Malay Kalavadia, Rina Kim, Fahim Talukder, Jessica Tsai" />
-  <title>Team 11</title>
-  <link href="styles.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="header">
-    <h1>Predicting Next Hits</h1>
-    <nav>
-      <ul>
-        <li><span>Home</span></li>
-        <li><a href="project_content.html">Project Content</a></li>
-        <li><a href="about_us.html">About Us</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class="wrapper">
-    <div class="container">
-
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="author"
+      content="Malay Kalavadia, Rina Kim, Fahim Talukder, Jessica Tsai"
+    />
+    <title>Team 11</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Responsive-->
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Predicting Next Hits</h1>
+      <nav>
+        <ul>
+          <li><span>Home</span></li>
+          <li><a href="project_content.html">Project Content</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+    <div class="our experts">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="titlepage2">
+              <h2><strong>HOME PAGE</strong></h2>
+            </div>
+          </div>
+        </div>
+      </div>
 
-</body>
+      <div class="wrapper">
+        <div class="container">
+          <div class="content">
+            <div class="left-side">
+              <img
+                class="body-img"
+                src="generic_beats.jpg"
+                alt="Generic beats image."
+                width="250"
+                height="250"
+              />
+            </div>
+          </div>
+
+          <div class="content">
+            <div class="right-side">
+              <p>
+                There have been massive changes in popular music over time. From
+                the jazz jubilees and disco decade to TikTok teens and
+                actor-dancer-singer triple threats, we currently live in an
+                epoch where singer-songwriters are around every corner and
+                populating social media with their content. This change in
+                popular music means that song structures have evolved as well.
+                Genre, beats per minute (bpm), singer gender, age, etc. are all
+                factors that play a role in making a particular song successful.
+                Looking at these factors, we hope our project will be able to
+                predict what types of songs will be the next big “hit.”
+              </p>
+
+              <p>
+                Our project will take metadata from Spotify (e.g. “artist”,
+                “album”) and use crossline textualization with billboard data to
+                see which songs are popular and analyze their structure using
+                metadata from Spotify, to see what factors are most important in
+                creating a “hit song”. We will be using the Spotify API because
+                it has a lot of “endpoint data” (metadata) that we can explore.
+                The API also comes with extensive documentation about how to use
+                and import the data for us to customize our project. Using this
+                data, we can find other songs on Spotify that meet the standards
+                for a “hit” as “predictions”.
+              </p>
+
+              <p>
+                To distinguish our app from products such as
+                <em>Billboard 100</em> and <em>Next Big Sound</em>, our app will
+                offer these predictions without needing an account to view. We
+                will also be including justifications for why we predict these
+                songs will be the next hits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
