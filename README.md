@@ -1,1 +1,7 @@
 # INST377-Team11
+
+There have been massive changes in popular music over time. From the jazz jubilees and disco decade to TikTok teens and actor-dancer-singer triple threats, we currently live in an epoch where singer-songwriters are around every corner and populating social media with their content. This change in popular music means that song structures have evolved as well. Genre, beats per minute (bpm), singer gender, age, etc. are all factors that play a role in making a particular song successful. Looking at these factors, we hope our project will be able to predict what types of songs will be the next big “hit.”
+
+Our project will take metadata from Spotify (e.g. “artist”, “album”) and use crossline textualization with billboard data to see which songs are popular and analyze their structure using metadata from Spotify, to see what factors are most important in creating a “hit song”. We will be using the Spotify API because it has a lot of “endpoint data” (metadata) that we can explore. The API also comes with extensive documentation about how to use and import the data for us to customize our project. Using this data, we can find other songs on Spotify that meet the standards for a “hit” as “predictions”.
+
+To distinguish our app from products such as *Billboard 100* and *Next Big Sound*, our app will offer these predictions without needing an account to view. We will also be including justifications for why we predict these songs will be the next hits.
