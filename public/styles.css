@@ -119,3 +119,13 @@ nav a, nav span {
   }
 
 }
+.suggestions li{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,9,121,0.7525385154061625) 35%, rgba(0,212,255,1) 100%);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 500px;
+  padding: 10px;
+  border: 5px none;
+  margin-bottom: 5%;
+}
