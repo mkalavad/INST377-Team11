@@ -2,21 +2,45 @@ body {
   background-color: #FAEACD;
 }
 
+nav {
+  height: 50px;
+  flex: 100%;
+  display: flex;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+nav a, nav span {
+  display: inline-block;
+  font-size: 2rem;
+  height: 3rem;
+  line-height: 1.7;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .header {
   font-family: 'Staatliches', cursive;
   font-weight: bold;
   background-color: #279AAD;
   color: #F5F2F0;
-  margin-top: -15px;
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-bottom: 15px;
+  margin: -15px -15px 15px -15px;
   padding: 15px;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
 }
 
 .wrapper {
