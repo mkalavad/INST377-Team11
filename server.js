@@ -3,6 +3,9 @@
 /* eslint-disable no-unused-vars */
 import express from 'express';
 import request from "request";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -27,7 +30,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-app.route('/index')
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
+app.route('/api')
   .get((req, res) => {
     console.log('GET request detected');
   })
