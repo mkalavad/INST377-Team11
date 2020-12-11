@@ -42,7 +42,10 @@ nav a, nav span {
   align-items: center;
   justify-content: space-between;
 }
-
+.title{
+  display: flex;
+  justify-content: center;
+}
 .wrapper {
   display: flex;
   justify-content: center;
@@ -55,6 +58,11 @@ nav a, nav span {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
+}
+.img_hover{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .content {
