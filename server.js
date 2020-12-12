@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import express from 'express';
-import request from "request";
+import request from 'request';
 import dotenv from 'dotenv';
 
 dotenv.config();
