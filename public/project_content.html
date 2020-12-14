@@ -62,7 +62,7 @@
             </p>
             <div id = "tempContainer"></div>
 
-            /******format it so it prints the rating, title, artist here******/
+            <!-- format it so it prints the rating, title, artist here-->
             
             for(let i = 0; i < 100; i++){
               <p></p>
@@ -75,7 +75,7 @@
                   document.getElementById("rating").innerHTML = JSON.parse(request.responseText).rating;
                   document.getElementById("song_title").innerHTML = JSON.parse(request.responseText).song_name;
                   document.getElementById("artist").innerHTML = JSON.parse(request.responseText).artist;
-                  document.getElementById("song_title").setAttribute("href", JSON.parse()request.responseText)./*find and create a url for all of them and put it here*/;
+                  document.getElementById("song_title").setAttribute("href", JSON.parse(request.responseText))./*find and create a url for all of them and put it here*/;
                 }
               </script>
 
