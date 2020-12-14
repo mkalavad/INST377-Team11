@@ -47,7 +47,7 @@ function processData(csv) {
 
 
 
-var templateSource = document.getElementById("results-template").innerHTML,
+let templateSource = document.getElementById("results-template").innerHTML,
   template = Handlebars.compile(templateSource),
   resultsPlaceholder = document.getElementById("results");
 
@@ -74,11 +74,8 @@ function tempsearch(query2) {
 
 
 
-for(let k = 0; k < songsArray.length; k++){
-var song_name = songsArray[k];
-var artist = artistsArray[k];
+for (let k = 0; k < songsArray.length; k++){
+let song_name = songsArray[k];
+let artist = artistsArray[k];
 response.json({"rating": rating, "song_title": song_name, "artist": artist});
 }
-
-
-
