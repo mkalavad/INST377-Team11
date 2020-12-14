@@ -60,10 +60,24 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod
             </p>
-            <div id = "chartContainer"></div>
-            <form>
-              ~~~~~~~~~~~~~~~~~~~~~~~~~~
-            </form>
+            <div id = "tempContainer"></div>
+
+            /******format it so it prints the rating, title, artist here******/
+            
+            for(let i = 0; i < 100; i++){
+              <p></p>
+            }
+              <script>
+                var request = new XMLHttpRequest();
+                request.open("GET",/*i'm not 100% sure what the route would be to the js*/, true);
+                request.send();
+                request.onload = function(){
+                  document.getElementById("rating").innerHTML = JSON.parse(request.responseText).rating;
+                  document.getElementById("song_title").innerHTML = JSON.parse(request.responseText).song_name;
+                  document.getElementById("artist").innerHTML = JSON.parse(request.responseText).artist;
+                  document.getElementById("song_title").setAttribute("href", JSON.parse()request.responseText)./*find and create a url for all of them and put it here*/;
+                }
+              </script>
 
           </div>
         </div>
