@@ -2,10 +2,9 @@
   "name": "inst377-fa2020",
   "version": "1.0.0",
   "description": "Repository for INST377 Dynamic Web Applications Fall 2020 at UMD",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "prerunjs": "node --experimental-modules --experimental-json-modules script.js",
     "start": "nodemon server.js"
   },
   "engines": {
