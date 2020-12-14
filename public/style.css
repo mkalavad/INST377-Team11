@@ -39,7 +39,7 @@
 
 body {
 	color: #666666;
-	background-color: #FAEACD;
+	background-color: #E6BC87;
 	font-family: 'Architects Daughter', cursive;
 	line-height: 1.80857;
 	font-weight: normal;
@@ -48,7 +48,7 @@ body {
 .header {
 	font-family: 'Staatliches', cursive;
 	font-weight: bold;
-	background-color: #279AAD;
+	background-color: #613C99;
 	color: #F5F2F0;
 	margin-top: -15px;
 	margin-left: -15px;
@@ -1651,7 +1651,7 @@ input[type="checkbox"] .styled:checked+label::after, input[type="radio"] .styled
 	padding-bottom: 0px;
 }
 .experts .experts-box {
-	background-color: #1d1616;
+	background-color: #595166;
 }
 .experts .experts-box {
 	padding-top: 50px;
