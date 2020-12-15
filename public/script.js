@@ -1,5 +1,6 @@
 import { response } from "express";
 import request from "request";
+import d3 from "d3";
 
 let ratingArray = [];
 let songsArray = [];
@@ -30,36 +31,13 @@ function tempsearch(query2) {
   };
 };
 
-function getA0T() {
-  request.post(authOptions, function(error, response, body) {
-    if (!error && response.statusCode === 200) {
 
-      // use the access token to access the Spotify Web API
-      let token = body.access_token;
-      console.log(token);
-      let options = {
-        url: 'https://api.spotify.com/v1/users/ageless_enemy',
-        content_type: 'application/x-www-form-urlencoded',
-        headers: {
-          'Authorization': 'Bearer ' + token
-        },
-        json: true
-      };
-      request.get(options, function(error, response, body) {
-        // console.log(body);
-      });
-      return token;
-    }
-  });
-}
-
-
-
-for (let k = 0; k < songsArray.length; k++){
-let song_name = songsArray[k];
-let artist = artistsArray[k];
-response.json({"rating": rating, "song_title": song_name, "artist": artist});
-}
+//
+// for (let k = 0; k < songsArray.length; k++){
+// let song_name = songsArray[k];
+// let artist = artistsArray[k];
+// response.json({"rating": rating, "song_title": song_name, "artist": artist});
+// }
 
 
 //read billboard_data.csv
