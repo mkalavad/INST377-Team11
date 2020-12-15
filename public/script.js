@@ -5,8 +5,6 @@ let ratingArray = [];
 let songsArray = [];
 let artistsArray = [];
 
-/****turn csv into a json and clean up code/check for bugs*****/
-
 
 function getAsText(fileToRead) {
   let reader = new FileReader();
