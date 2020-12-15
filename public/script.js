@@ -1,50 +1,8 @@
 import { response } from "express";
-// const express = require('express');
 
 let ratingArray = [];
 let songsArray = [];
 let artistsArray = [];
-
-/*
-function getAsText(fileToRead) {
-  let reader = new FileReader();
-  reader.readAsText(fileToRead);
-  reader.onload = loadHandler;
-}
-
-function handleFiles(files) {
-  if (window.FileReader) {
-    getAsText(files[0]);
-  }
-}
-
-function loadHandler(event) {
-  let csv = event.target.result;
-  processData(csv);
-}
-
-function processData(csv) {
-  let allTextLines = csv.split("/\r\n|\n");
-
-  for (let i = 0; i < allTextLines.length; i++) {
-    let row = allTextLines[i].split(",");
-    let col1 = [];
-    let col = [];
-    let col2 = [];
-
-    for (let j = 0; j < row.length; j++) {
-      col1.push(row[0]);
-      col.push(row[1]);
-      col2.push(row[2]);
-    }
-    ratingArray.push(col1);
-    songsArray.push(col);
-    artistsArray.push(col2);
-  }
-}
-
-
-
 
 let templateSource = document.getElementById("results-template").innerHTML,
   template = Handlebars.compile(templateSource),
@@ -54,7 +12,7 @@ function getHits() {
   for (let j = 0; j < artistsArray.length; j++) {
     tempsearch(artistsArray[j]);
   }
-}*/
+}
 
 function tempsearch(query2) {
   for (let i = 0; i < songsArray.length; i++) {
@@ -70,6 +28,29 @@ function tempsearch(query2) {
     });
   };
 };
+
+function getA0T() {
+  request.post(authOptions, function(error, response, body) {
+    if (!error && response.statusCode === 200) {
+
+      // use the access token to access the Spotify Web API
+      let token = body.access_token;
+      console.log(token);
+      let options = {
+        url: 'https://api.spotify.com/v1/users/ageless_enemy',
+        content_type: 'application/x-www-form-urlencoded',
+        headers: {
+          'Authorization': 'Bearer ' + token
+        },
+        json: true
+      };
+      request.get(options, function(error, response, body) {
+        // console.log(body);
+      });
+      return token;
+    }
+  });
+}
 
 
 

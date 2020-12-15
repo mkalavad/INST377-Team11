@@ -48,25 +48,25 @@ app.route('/api')
 });
 
 //copy from https://github.com/spotify/web-api-auth-examples/blob/master/client_credentials/app.js
-request.post(authOptions, function(error, response, body) {
-  if (!error && response.statusCode === 200) {
-
-    // use the access token to access the Spotify Web API
-    let token = body.access_token;
-    console.log(token);
-    let options = {
-      url: 'https://api.spotify.com/v1/users/ageless_enemy',
-      content_type: 'application/x-www-form-urlencoded',
-      headers: {
-        'Authorization': 'Bearer ' + token
-      },
-      json: true
-    };
-    request.get(options, function(error, response, body) {
-      // console.log(body);
-    });
-  }
-});
+// request.post(authOptions, function(error, response, body) {
+//   if (!error && response.statusCode === 200) {
+//
+//     // use the access token to access the Spotify Web API
+//     let token = body.access_token;
+//     console.log(token);
+//     let options = {
+//       url: 'https://api.spotify.com/v1/users/ageless_enemy',
+//       content_type: 'application/x-www-form-urlencoded',
+//       headers: {
+//         'Authorization': 'Bearer ' + token
+//       },
+//       json: true
+//     };
+//     request.get(options, function(error, response, body) {
+//       // console.log(body);
+//     });
+//   }
+// });
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
