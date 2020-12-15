@@ -101,6 +101,7 @@ th, td {
   padding: 15px;
 }
 
+
 @media screen and (max-width: 1000px) {
   .container {
     justify-content: center;
@@ -132,4 +133,8 @@ th, td {
   padding: 10px;
   border: 5px none;
   margin-bottom: 5%;
+}
+
+td span{
+  font-size: 36px;
 }
