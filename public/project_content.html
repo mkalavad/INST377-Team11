@@ -66,25 +66,11 @@
     <script src="script.js"></script>
 
     <script>
-    //read billboard_data.csv
-    // console.log("ENTER YOU DAMN THING ENTER");
-    // import 'fs' from fs;
     d3.csv("billboard_data.csv", function(data) {
       for (let i = 0; i < 100; i++) {
-        // console.log("FRUTTI LOOPY DI DIDDLY");
-        // console.log(data[i].Songs);
-        // console.log("TEQUILA TEQUILA TEQUILA");
-        // console.log(data[i].Artists);
         const jsonString = JSON.stringify(data);
+        const jsonStringedited = jsonString.split(' ').join('+'); //replace spaces with + to search on API
         console.log(jsonString); // turned stuff into JSON, but haven't turned to a file yet
-
-        // fs.writeFile('./SpotifyCSV.json', jsonString, err => {
-        //   if (err) {
-        //     console.log('Error writing file', err)
-        //   } else {
-        //     console.log('Successfully wrote file')
-        //   }
-        // })
 
       }
     });
