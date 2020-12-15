@@ -55,35 +55,28 @@
         </div>
       </div>
     </div>
-    <script src="canvasjs.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-      // read billboard_data
-      d3.csv("billboard_data.csv", function (data) {
-        const jsonString = JSON.stringify(data);
-        const jsonData = JSON.parse(jsonString);
-        append_json(jsonData);
-      });
-      function append_json(data) {
-        let table = document.getElementById("music_chart");
-        data.forEach(function (object) {
-          const tr = document.createElement("tr");
-          tr.innerHTML =
-            "<td>" +
-            (parseInt(object.num, 10) + 1) +
-            "</td>" +
-            "<td>" +
-            object.Songs +
-            "</td>" +
-            "<td>" +
-            object.Artists +
-            "</td>" +
-            "<td>" +
-            "<span>&#8227;</span>" +
-            "</td>";
-          table.appendChild(tr);
-        });
-      }
-    </script>
-  </body>
+  </div>
+  <script src="canvasjs.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+  //read billboard_data
+  d3.csv("billboard_data.csv", function(data) {
+    const jsonString = JSON.stringify(data);
+    const jsonData = JSON.parse(jsonString);
+    append_json(jsonData);
+  });
+  function append_json(data) {
+    let table = document.getElementById("music_chart");
+    data.forEach(function(object) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = "<td>" + (parseInt(object.num, 10) + 1) + "</td>" +
+      "<td>" + object.Songs + "</td>" +
+      "<td>" + object.Artists + "</td>" +
+      "<td>" + "<span>&#8227;</span>" + "</td>";
+      table.appendChild(tr);
+    });
+  }
+
+  </script>
+</body>
 </html>
