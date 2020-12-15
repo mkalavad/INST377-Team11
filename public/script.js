@@ -5,9 +5,7 @@ let ratingArray = [];
 let songsArray = [];
 let artistsArray = [];
 
-/****turn csv into a json and clean up code/check for bugs*****/
-
-
+/*
 function getAsText(fileToRead) {
   let reader = new FileReader();
   reader.readAsText(fileToRead);
@@ -56,7 +54,7 @@ function getHits() {
   for (let j = 0; j < artistsArray.length; j++) {
     tempsearch(artistsArray[j]);
   }
-}
+}*/
 
 function tempsearch(query2) {
   for (let i = 0; i < songsArray.length; i++) {
