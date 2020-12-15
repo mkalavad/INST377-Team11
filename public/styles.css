@@ -1,5 +1,5 @@
 body {
-  background-color: #E6BC87;
+  background-color: #e6bc87;
 }
 
 nav {
@@ -21,7 +21,8 @@ nav li {
   flex: 1;
 }
 
-nav a, nav span {
+nav a,
+nav span {
   display: inline-block;
   font-size: 2rem;
   height: 3rem;
@@ -31,10 +32,10 @@ nav a, nav span {
 }
 
 .header {
-  font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
   font-weight: bold;
-  background-color: #613C99;
-  color: #F5F2F0;
+  background-color: #613c99;
+  color: #f5f2f0;
   margin: -15px -15px 15px -15px;
   padding: 15px;
   display: flex;
@@ -42,7 +43,7 @@ nav a, nav span {
   align-items: center;
   justify-content: space-between;
 }
-.title{
+.title {
   display: flex;
   justify-content: center;
 }
@@ -53,13 +54,13 @@ nav a, nav span {
 }
 
 .container {
-  font-family: 'Architects Daughter', cursive;
+  font-family: "Architects Daughter", cursive;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
 }
-.img_hover{
+.img_hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -87,20 +88,20 @@ nav a, nav span {
 
 .caption {
   display: flex;
-  background-color: #A4D7DB;
-  padding: 15px
+  background-color: #a4d7db;
+  padding: 15px;
 }
 
 .right-side {
-  background-color: #A4D7DB;
+  background-color: #a4d7db;
   align-self: flex-end;
   padding: 15px;
 }
 
-th, td {
+th,
+td {
   padding: 15px;
 }
-
 
 @media screen and (max-width: 1000px) {
   .container {
@@ -122,10 +123,14 @@ th, td {
     align-self: center;
     justify-content: center;
   }
-
 }
-.suggestions li{
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,9,121,0.7525385154061625) 35%, rgba(0,212,255,1) 100%);
+.suggestions li {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(81, 9, 121, 0.7525385154061625) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
   display: flex;
   flex-direction: column;
   color: white;
@@ -135,6 +140,22 @@ th, td {
   margin-bottom: 5%;
 }
 
-td span{
+td span {
   font-size: 36px;
+}
+
+.docu {
+  display: flex;
+  flex-direction: column;
+}
+.first_halph {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.secound_halph {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
 }
