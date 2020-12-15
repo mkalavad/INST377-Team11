@@ -1,70 +1,82 @@
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8" />
-  <meta
-  name="author"
-  content="Malay Kalavadia, Rina Kim, Fahim Talukder, Jessica Tsai"
-  />
-  <title>Team 11</title>
-  <link href="styles.css" rel="stylesheet" />
-  <link
-  href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
-  rel="stylesheet"
-  />
-  <link
-  href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
-  rel="stylesheet"
-  />
-  <link
-  href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
-  rel="stylesheet"
-  />
-  <!-- style css -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- Responsive-->
-  <link rel="stylesheet" href="responsive.css" />
-  <script
-  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-  crossorigin="anonymous"
-  ></script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-</head>
-<body>
-  <div class="header">
-    <h1 class="title-bar" href="index.html">Predicting Next Hits</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>Project Content</li>
-        <li><a href="about_us.html">About Us</a></li>
-        <li><a href= "documentation.html">Documentation</a></li>
-      </ul>
-    </nav>
-  </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="author"
+      content="Malay Kalavadia, Rina Kim, Fahim Talukder, Jessica Tsai"
+    />
+    <title>Team 11</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Responsive-->
+    <link rel="stylesheet" href="responsive.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title-bar" href="index.html">Predicting Next Hits</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>Project Content</li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </div>
 
-  <div class="wrapper">
-    <div class="container">
-
-      <div id="results"></div>
-      <script id="results-template" type="text/x-handlebars-template">
-        {{#each albums.items}}
-        <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
-        {{/each}}
-      </script>
-
+    <div class="wrapper">
+      <div class="container">
+        <div class="chart_area">
+          <table id="music_chart">
+            <th>Number</th>
+            <th>Song</th>
+            <th>Artist</th>
+            <th>Play</th>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
   <script src="canvasjs.min.js"></script>
   <script src="script.js"></script>
+  <script>
+  //read billboard_data
+  d3.csv("billboard_data.csv", function(data) {
+    const jsonString = JSON.stringify(data);
+    const jsonData = JSON.parse(jsonString);
+    append_json(jsonData);
+  });
+  function append_json(data) {
+    let table = document.getElementById("music_chart");
+    data.forEach(function(object) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = "<td>" + (parseInt(object.num, 10) + 1) + "</td>" +
+      "<td>" + object.Songs + "</td>" +
+      "<td>" + object.Artists + "</td>" +
+      "<td>" + "<span>&#8227;</span>" + "</td>";
+      table.appendChild(tr);
+    });
+  }
 
-  <script>d3.csv("billboard_data.csv", function(data) {
-    for (let i = 0; i < 100; i++) {
-      const jsonString = JSON.stringify(data);
-      const jsonStringedited = jsonString.split(' ').join('+'); //replace spaces with + to search on API
-      console.log(jsonString); // turned stuff into JSON, but haven't turned to a file yet
-
-    }
-  });</script>
+  </script>
 </body>
 </html>

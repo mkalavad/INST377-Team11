@@ -2,20 +2,6 @@ body {
   background-color: #E6BC87;
 }
 
-.cover {
-    width: 300px;
-    height: 300px;
-    display: inline-block;
-    background-size: cover;
-}
-.cover:hover {
-    cursor: pointer;
-}
-.cover.playing {
-    border: 5px solid #e45343;
-}
-
-
 nav {
   height: 50px;
   flex: 100%;
@@ -111,6 +97,11 @@ nav a, nav span {
   padding: 15px;
 }
 
+th, td {
+  padding: 15px;
+}
+
+
 @media screen and (max-width: 1000px) {
   .container {
     justify-content: center;
@@ -142,4 +133,8 @@ nav a, nav span {
   padding: 10px;
   border: 5px none;
   margin-bottom: 5%;
+}
+
+td span{
+  font-size: 36px;
 }
