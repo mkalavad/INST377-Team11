@@ -45,29 +45,45 @@
 
     <div class="wrapper">
       <div class="container">
-        <div id="results"></div>
-        <script id="results-template" type="text/x-handlebars-template">
-          {{#each albums.items}}
-            <div
-              style="background-image:url({{images.0.url}})"
-              data-album-id="{{id}}"
-              class="cover"
-            ></div>
-          {{/each}}
-        </script>
+        <div class="chart_area">
+          <table id="music_chart">
+            <th>Number</th>
+            <th>Song</th>
+            <th>Artist</th>
+            <th>Play</th>
+          </table>
+        </div>
       </div>
     </div>
     <script src="canvasjs.min.js"></script>
     <script src="script.js"></script>
-
     <script>
+      // read billboard_data
       d3.csv("billboard_data.csv", function (data) {
-        for (let i = 0; i < 100; i++) {
-          const jsonString = JSON.stringify(data);
-          const jsonStringedited = jsonString.split(" ").join("+"); //replace spaces with + to search on API
-          console.log(jsonString); // turned stuff into JSON, but haven't turned to a file yet
-        }
+        const jsonString = JSON.stringify(data);
+        const jsonData = JSON.parse(jsonString);
+        append_json(jsonData);
       });
+      function append_json(data) {
+        let table = document.getElementById("music_chart");
+        data.forEach(function (object) {
+          const tr = document.createElement("tr");
+          tr.innerHTML =
+            "<td>" +
+            (parseInt(object.num, 10) + 1) +
+            "</td>" +
+            "<td>" +
+            object.Songs +
+            "</td>" +
+            "<td>" +
+            object.Artists +
+            "</td>" +
+            "<td>" +
+            "<span>&#8227;</span>" +
+            "</td>";
+          table.appendChild(tr);
+        });
+      }
     </script>
   </body>
 </html>
