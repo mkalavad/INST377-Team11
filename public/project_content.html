@@ -1,63 +1,63 @@
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="author"
-      content="Malay Kalavadia, Rina Kim, Fahim Talukder, Jessica Tsai"
-    />
-    <title>Team 11</title>
-    <link href="styles.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
-      rel="stylesheet"
-    />
-    <!-- style css -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Responsive-->
-    <link rel="stylesheet" href="responsive.css" />
-  </head>
-  <body>
-    <div class="header">
-      <h1>Predicting Next Hits</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li>Project Content</li>
-          <li><a href="about_us.html">About Us</a></li>
-          <li><a href="documentation.html">Documentation</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="our experts">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="titlepage2">
-            <h2><strong>Project Content</strong></h2>
-          </div>
-        </div>
-    <div class="wrapper">
-      <div class="container">
-        <div id="results"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta
+  name="author"
+  content="Malay Kalavadia, Rina Kim, Fahim Talukder, Jessica Tsai"
+  />
+  <title>Team 11</title>
+  <link href="styles.css" rel="stylesheet" />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+  rel="stylesheet"
+  />
+  <!-- style css -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Responsive-->
+  <link rel="stylesheet" href="responsive.css" />
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"
+  ></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1 class="title-bar" href="index.html">Predicting Next Hits</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>Project Content</li>
+        <li><a href="about_us.html">About Us</a></li>
+      </ul>
+    </nav>
+  </div>
 
-        <script id="results-template" type="text/x-handlebars-template">
+  <div class="wrapper">
+    <div class="container">
+
+      <div id="results"></div>
+      <script id="results-template" type="text/x-handlebars-template">
         {{#each albums.items}}
         <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
         {{/each}}
       </div>
     </div>
-    
+  
       </div>
     </div>
     <script src="canvasjs.min.js"></script>
     <script src="script.js"></script>
+
     <script>
     //read billboard_data.csv
     // console.log("ENTER YOU DAMN THING ENTER");

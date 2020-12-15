@@ -17,6 +17,8 @@ const redirect_uri = 'http://localhost:3000/callback'; // Your redirect uri
 
 const authOptions = {
   url: 'https://accounts.spotify.com/api/token',
+  method: 'POST', //request authorization
+  content_type: 'application/x-www-form-urlencoded',
   headers: {
     'Authorization': 'Basic ' + (Buffer.from(client_id + ':' + client_secret).toString('base64'))
   },
@@ -37,13 +39,13 @@ app.use((req, res, next) => {
 });
 
 app.route('/api')
-  .get((req, res) => {
-    console.log('GET request detected');
-  })
-  .post((req, res) => {
-    console.log('POST request detected');
-    console.log('Form data in req.body', req.body);
-  });
+.get((req, res) => {
+  console.log('GET request detected');
+})
+.post((req, res) => {
+  console.log('POST request detected');
+  console.log('Form data in req.body', req.body);
+});
 
 //copy from https://github.com/spotify/web-api-auth-examples/blob/master/client_credentials/app.js
 request.post(authOptions, function(error, response, body) {
@@ -51,8 +53,10 @@ request.post(authOptions, function(error, response, body) {
 
     // use the access token to access the Spotify Web API
     let token = body.access_token;
+    console.log(token);
     let options = {
-      url: 'https://api.spotify.com/v1/users/jmperezperez',
+      url: 'https://api.spotify.com/v1/users/ageless_enemy',
+      content_type: 'application/x-www-form-urlencoded',
       headers: {
         'Authorization': 'Bearer ' + token
       },
