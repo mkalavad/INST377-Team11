@@ -80,3 +80,12 @@ let song_name = songsArray[k];
 let artist = artistsArray[k];
 response.json({"rating": rating, "song_title": song_name, "artist": artist});
 }
+
+
+//read billboard_data.csv
+d3.csv("billboard_data.csv", function(data) {
+  for (let i = 0; i < 100; i++) {
+    const jsonString = JSON.stringify(data);
+    console.log(jsonString); // turned stuff into JSON
+  }
+});

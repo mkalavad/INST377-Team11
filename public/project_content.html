@@ -50,44 +50,21 @@
         {{#each albums.items}}
         <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
         {{/each}}
-      </div>
+      </script>
+
     </div>
-    <div class="our experts">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="titlepage2">
-            <h2><strong> Project Content</strong></h2>
+  </div>
 
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="canvasjs.min.js"></script>
-    <script src="script.js"></script>
-
-    <script>
-    //read billboard_data.csv
-    // console.log("ENTER YOU DAMN THING ENTER");
-    // import 'fs' from fs;
-    d3.csv("billboard_data.csv", function(data) {
-      for (let i = 0; i < 100; i++) {
-        // console.log("FRUTTI LOOPY DI DIDDLY");
-        // console.log(data[i].Songs);
-        // console.log("TEQUILA TEQUILA TEQUILA");
-        // console.log(data[i].Artists);
-        const jsonString = JSON.stringify(data);
-        console.log(jsonString); // turned stuff into JSON, but haven't turned to a file yet
-
-        // fs.writeFile('./SpotifyCSV.json', jsonString, err => {
-        //   if (err) {
-        //     console.log('Error writing file', err)
-        //   } else {
-        //     console.log('Successfully wrote file')
-        //   }
-        // })
-
-      }
-    });
-    </script>
-  </body>
-  </html>
+  <script src="canvasjs.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+  d3.csv("billboard_data.csv", function(data) {
+    for (let i = 0; i < 100; i++) {
+      const jsonString = JSON.stringify(data);
+      const jsonStringEdited = jsonString.split(' ').join('+');
+      console.log(jsonStringEdited); // turned stuff into JSON
+    }
+  });
+  </script>
+</body>
+</html>
